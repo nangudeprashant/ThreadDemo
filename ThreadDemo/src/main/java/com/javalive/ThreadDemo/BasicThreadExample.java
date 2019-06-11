@@ -4,6 +4,16 @@ package com.javalive.ThreadDemo;
  * Hello world!
  *
  */
+
+class RunnableThread implements Runnable{
+
+	public void run() {
+		
+		System.out.println("This is run method of RunnableThread class......");
+		new BasicThreadExample().displayNumbers(2);
+	}
+	
+}
 public class BasicThreadExample extends Thread
 {
 	public void run() {
@@ -24,7 +34,7 @@ public class BasicThreadExample extends Thread
 	}
     public static void main( String[] args )
     {
-    	BasicThreadExample obj1=new BasicThreadExample();
+    	/*BasicThreadExample obj1=new BasicThreadExample();
     	BasicThreadExample obj2=new BasicThreadExample();
     	obj1.setName("MyThread1");
     	System.out.println("First thread calling start() method");
@@ -33,10 +43,13 @@ public class BasicThreadExample extends Thread
     	System.out.println("Second thread calling start() method");
     	obj2.start();
     	System.out.println("=====================++++++++++++++++++++++++++++===============================================");
-    	/*System.out.println("First thread calling display() method");
+    	System.out.println("First thread calling display() method");
     	obj1.displayNumbers(11);
     	System.out.println("\nSecond thread calling display() method");
     	obj2.displayNumbers(5);*/
+    	
+    	Thread t1= new Thread(new RunnableThread());
+    	t1.start();
     	
     }
     
