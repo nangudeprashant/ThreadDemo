@@ -74,7 +74,6 @@ class DataArchiveThread implements Runnable {
 
 public class ThreadJoinDemo {
 	public static void main(String[] args) {
-		
 	DataEntry dataEntryObj = new DataEntry();
 	DataValidation dataValidationObj = new DataValidation();
 	DataSaving dataSavingObj = new DataSaving();
